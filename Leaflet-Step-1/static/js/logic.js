@@ -19,3 +19,7 @@ function getColor(depth) {
     if (depth > 90) {
         circleColor = "red";
     }
+    else if (depth > 70) {
+        circleColor = "#eb5e34";
+    }
+    

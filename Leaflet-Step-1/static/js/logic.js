@@ -5,4 +5,4 @@ var myMap = L.map("mapid", {
     zoom: 2
 });
 
-L.titleLayer
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {

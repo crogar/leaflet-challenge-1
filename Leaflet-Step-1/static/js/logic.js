@@ -33,3 +33,14 @@ function getColor(depth) {
     }
     return circleColor;
 }
+d3.json(earthquake_url).then(data => {
+    console.log(data);
+    L.geoJSON(data, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, {
+                radius: feature.properties.mag*2,
+                fillColor: getColor(feature.geometry.coordinates[2]),
+                color: "black",
+                weight: 1
+            });
+  

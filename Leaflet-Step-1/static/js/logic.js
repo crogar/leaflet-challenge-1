@@ -63,3 +63,9 @@ d3.json(earthquake_url).then(data => {
               div.innerHTML += labels.join("");
               return div;
             };
+
+          // Adding legend to the map
+             legend.addTo(myMap);
+        }).catch(function(error) {
+    console.log(error);
+        });

@@ -43,4 +43,9 @@ d3.json(earthquake_url).then(data => {
                 color: "black",
                 weight: 1
             });
+        },
+            onEachFeature: function(feature, layer) {
+                layer.bindPopup(`${feature.properties.place}<br>Magnitude: ${feature.properties.mag}<br>${new Date(feature.properties.time)}`);
+            }
+        }).addTo(myMap)
   

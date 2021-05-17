@@ -31,3 +31,5 @@ function getColor(depth) {
     else if (depth > 10) {
         circleColor = "#e2eb34";
     }
+    return circleColor;
+}

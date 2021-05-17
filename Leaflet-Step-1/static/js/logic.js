@@ -14,3 +14,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: API_KEY
 }).addTo(myMap);
 
+function getColor(depth) {
+    var circleColor = "green";
+    if (depth > 90) {
+        circleColor = "red";
+    }
